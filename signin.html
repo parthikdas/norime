@@ -13,7 +13,7 @@
 
 <div class="container">
     <div>
-        <h4 class="Login" style="position: absolute; top: -17px;font-size:30px; left: 250px;  color: cornsilk">Sign-up
+        <h4 class="Login" style="position: absolute; top: -17px;font-size:30px; left: 250px;  color: cornsilk">Sign-in
         </h4>
         <form class="sign-form">
 
@@ -26,34 +26,20 @@
             </div>
 
             <label for="Email" class="email_label">Email :</label>
-            <input type="text" name="email" class="email" required="required">
+            <input type="text" name="email" id="email" required="required" class="email">
             <div class="red-text-email">
 
             </div>
     </div>
     <div>
-        <label for="names" class="name_label">Name :</label>
-        <input type="text" name="names" class="name" required="required">
-        <div class="red-text-name">
-
-        </div>
-    </div>
-    <div>
         <label class="password_label">Password :</label>
-        <input type="password" name="passwords" class="password" required="required">
-        <div class="red-text-password">
-
-        </div>
-    </div>
-    <div>
-        <label class="confirm_password_label">Retype Pass :</label>
-        <input type="password" name="confirm_passwords" class="confirm_password" required="required">
+        <input type="password" name="passwords" id="password" required="required" class="password">
         <div class="red-text-password">
 
         </div>
     </div>
     <div class="button">
-        <input type="submit" name="submit" value="submit" class="submit">
+        <button id="submit" class="submit">Submit</button>
     </div>
 
     <!-- <a href="login.html"
@@ -66,13 +52,14 @@
     // const submit_button = document.querySelector('.submit');
     const api = 'http://localhost:3000/data'
     document.getElementById('submit').addEventListener('click', function () {
-        const user_name = document.getElementById('name');
         const user_email = document.getElementById('email');
         const user_password = document.getElementById('password');
-        const user_confirm_password = document.getElementById('confirm_password');
-        if (user_name.value && user_email.value && user_password.value && user_confirm_password.value) {
+        if (user_email.value && user_password.value) {
+
+
 
         }
+
     });
 </script>
 
