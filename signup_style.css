@@ -1,0 +1,136 @@
+body{
+    background-image: url(backgroundimg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    
+    position: relative;
+    top: 100px;
+    left: 330px;
+    height: 380px;
+    width: 600px;
+    background-color: rgb(0,0,0,0.8);
+    border-radius: 10%;
+}
+
+.sign-form{
+    position: relative;
+}
+
+.email{
+    position: absolute;
+    top: 85px;
+    left: 160px;
+    height: 35px;
+    width: 300px;
+    border-top: black;
+    background-color: cadetblue;
+}
+
+.name{
+    position: absolute;
+    top: 165px;
+    left:160px;
+    height: 35px;
+    width: 300px;
+    border-top: black;
+    background-color: cadetblue;
+}
+
+.password{
+    position: absolute;
+    top: 245px;
+    left:160px;
+    height: 35px;
+    width: 300px;
+    border-top: black;
+    background-color: cadetblue;
+}
+.confirm_password{
+    
+        position: absolute;
+        top: 245px;
+        left:160px;
+        height: 35px;
+        width: 300px;
+        border-top: black;
+        background-color: cadetblue;
+
+}
+.submit{
+    position: absolute;
+    top: 315px;
+    left: 260px;
+    height: 35px;
+    width: 100px;
+
+}
+
+input[type="submit"]{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    font-size:20px;
+    font-weight: 500;
+    background-color: rgb(112, 5, 112);
+    border: none;
+    cursor: pointer;
+    
+  }
+
+.email_label{
+    position: absolute;
+    top: 90px;
+    left: 90px;
+    font-size: 20px;
+    font-weight: bold;
+    color: cornsilk;
+}
+
+.email_exist{
+    position: absolute;
+    color: crimson;
+    top: 100px;
+    left: 50px;
+
+}
+
+.name_label{
+    position: absolute;
+    top: 172px;
+    left: 90px;
+    font-size: 20px;
+    font-weight: bold;
+    color: cornsilk;
+}
+
+.password_label{
+    position: absolute;
+    top: 253px;
+    left: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    color: cornsilk;
+}
+
+.red-text-email{
+    position: absolute;
+    top: 130px;
+    left: 167px;
+    color: crimson;
+
+}
+
+.red-text-name{
+    position: absolute;
+    top: 210px;
+    left: 167px;
+    color: crimson;
+}
+
+.red-text-password{
+    position: absolute;
+    top: 290px;
+    left: 167px;
+    color: crimson;
+}
