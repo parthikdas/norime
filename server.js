@@ -11,7 +11,7 @@ http.createServer((req, res) => {
             stream.pipe(res)
         }
     } else {
-        let fileName = '.' + (req.url === '/' ? '/signup.html' : req.url)
+        let fileName = '.' + (req.url === '/' ? '/index.html' : req.url)
         const stream = fs.createReadStream(fileName)
         stream.pipe(res)
     }

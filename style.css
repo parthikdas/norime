@@ -44,3 +44,8 @@ body{
   .copyright{
     text-align: center;
   }
+
+  /* Dont remove below style */
+  #expenseTracker {
+      display: none;
+  }

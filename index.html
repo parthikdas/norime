@@ -77,43 +77,70 @@
             </nav>
           </div>
     </div>
+    
     <div class="main">
-        <div class="container-lg box">
-        <h1 class="display-4">LoggIt - Expenses</h1>
-        <div class="h3 ms-5 mt-5 text-start">Balance: 0</div>
-        
-        <div class="input-group pt-5 ps-5 pe-5">
-          <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
-          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <!-- Signin / Signup section -->
+        <div class="container-lg box" id="containerShow">
+            <h4 id="heading" style="color: cornsilk">Sign-up</h4>
+            <div id="email-input">
+                <label for="Email" class="email_label">Email :</label>
+                <input type="text" name="email" id="email" required class="email"><br>
+            </div>
+            <div id="name-input">
+                <label for="names" class="name_label">Name :</label>
+                <input type="text" name="names" id="name" required class="name"><br>
+            </div>
+           <div id="pass-input">
+                <label class="password_label">Password :</label>
+                <input type="password" name="passwords" id="password" required class="password"><br>
+           </div>
+            <div id="confirm-pass-input">
+                <label class="confirm_password_label">Retype Pass :</label>
+                <input type="password" name="confirm_passwords" id="confirm_password" required class="confirm_password"><br>
+            </div>
+            <button id="submit" class="submit">Submit</button><br>
+            <button id = "showSection">Click here to signin</button>
         </div>
+        <!-- Signin / Signup section ends -->
+        <!-- Expense tracker main section -->
+        <div class="container-lg box" id="expenseTracker">
+            <h1 class="display-4">LoggIt - Expenses</h1>
+            <div class="h3 ms-5 mt-5 text-start">Balance: 0</div>
+            
+            <div class="input-group pt-5 ps-5 pe-5">
+            <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
 
-        <div class="input-group mb-3 p-5">
-          <span class="input-group-text" id="inputGroup-sizing-default">Amount</span>
-          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-        </div>
+            <div class="input-group mb-3 p-5">
+            <span class="input-group-text" id="inputGroup-sizing-default">Amount</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
 
-        <div class="btns row justify-content-evenly">
-          <div class="col-6"><button type="button" class="btn btn-primary btn-lg btn1">Deposit</button></div>
-          <div class="col-6"><button type="button" class="btn btn-danger btn-lg btn2">Withdraw</button></div>
-        </div>
-
+            <div class="btns row justify-content-evenly">
+            <div class="col-6"><button type="button" class="btn btn-primary btn-lg btn1">Deposit</button></div>
+            <div class="col-6"><button type="button" class="btn btn-danger btn-lg btn2">Withdraw</button></div>
+            </div>
+            
         </div>
     </div>
+    <!-- Expense tracker main section ends -->
     <div class="bottom">
       <div class="fs-5">About Us
         <hr>
     </div>
     <br>
-    <div class="d-flex justify-content-evenly">
+    <div class="d-flex justify-content-around">
         <a class="nav-link text-white-50" href="https://www.canva.com/design/DAE6wigyBLs/xROpL6lfA8SK6m8RRjQRpw/view?utm_content=DAE6wigyBLs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Presentation</a>
         <a class="nav-link text-white-50" href="https://hackowasp.live/">HackOWasp 4.0</a>
-        <a class="nav-link text-white-50" href="https://github.com/parthikdas/norime">GitHub</a>
+        <a class="nav-link text-white-50" href="https://github.com/parthikdas/norime">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GitHub</a>
     </div>
     <br>
         <p class="copyright">© 2022 LoggIt</p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
