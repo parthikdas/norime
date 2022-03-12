@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel='stylesheet' type='text/css' href='signup_style.css' />
+    <link rel='stylesheet' type='text/css' href='signin_style.css' />
     <!-- <link rel="icon" href="logo.png" type="image/icon type"> -->
 </head>
 
@@ -26,35 +26,34 @@
             </div>
 
             <label for="Email" class="email_label">Email :</label>
-            <input type="text" name="email" id="email" required="required" class="email">
+            <input type="text" name="email" class="email" required="required">
             <div class="red-text-email">
 
             </div>
     </div>
     <div>
         <label for="names" class="name_label">Name :</label>
-        <input type="text" name="names" id="name" required="required" class="name">
+        <input type="text" name="names" class="name" required="required">
         <div class="red-text-name">
 
         </div>
     </div>
     <div>
         <label class="password_label">Password :</label>
-        <input type="password" name="passwords" id="password" required="required" class="password">
+        <input type="password" name="passwords" class="password" required="required">
         <div class="red-text-password">
 
         </div>
     </div>
     <div>
         <label class="confirm_password_label">Retype Pass :</label>
-        <input type="password" name="confirm_passwords" id="confirm_password" required="required"
-            class="confirm_password">
+        <input type="password" name="confirm_passwords" class="confirm_password" required="required">
         <div class="red-text-password">
 
         </div>
     </div>
     <div class="button">
-        <button id="submit" class="submit">Submit</button>
+        <input type="submit" name="submit" value="submit" class="submit">
     </div>
 
     <!-- <a href="login.html"
@@ -72,27 +71,7 @@
         const user_password = document.getElementById('password');
         const user_confirm_password = document.getElementById('confirm_password');
         if (user_name.value && user_email.value && user_password.value && user_confirm_password.value) {
-            if (user_password.value == user_confirm_password.value) {
 
-                fetch("http://localhost:3000/data")
-                    .then(data => data.json())
-                    .then(data => {
-                        data.push({
-                            id: data.length,
-                            name: user_name.value,
-                            email: user_email.value,
-                            password: user_password.value
-                        })
-                        fetch("http://localhost:3000/data", {
-                            method: "POST",
-                            body: JSON.stringify(data)
-                        }).then(data => data.json()).then(data => console.log(data))
-                    })
-
-            } else {
-                alert("Password not same");
-                user_password.innerHTML = user_confirm_password.innerHTML = "";
-            }
         }
     });
 </script>

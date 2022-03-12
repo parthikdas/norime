@@ -69,8 +69,7 @@ body{
 
 }
 
-#submit{
-    text-align: center;
+input[type="submit"]{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
     font-size:20px;
     font-weight: 500;

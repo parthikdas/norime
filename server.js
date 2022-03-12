@@ -1,28 +1,28 @@
 const http = require('http')
 const fs = require('fs') // to read file
 http.createServer((req, res) => {
-    if(req.url == '/') {
-        fs.readFile("./signup.html", "UTF-8", function(err, html){
-            res.writeHeader(200, {"Content-Type": "text/html"})
+    if (req.url == '/') {
+        fs.readFile("./signup.html", "UTF-8", function (err, html) {
+            res.writeHeader(200, { "Content-Type": "text/html" })
             res.write(html)
             res.end()
         })
-    } else if(req.url.match("\.css$")) { // using regex to find css extension
-        fs.readFile("./style.css", "UTF-8", function(err, css){ // here we know only 1 css so doing like this but in case of multi files do like js, line 18
-            res.writeHeader(200, {"Content-Type": "text/css"})
+    } else if (req.url.match("\.css$")) { // using regex to find css extension
+        fs.readFile("./signup_style.css", "UTF-8", function (err, css) { // here we know only 1 css so doing like this but in case of multi files do like js, line 18
+            res.writeHeader(200, { "Content-Type": "text/css" })
             res.write(css)
             res.end()
         })
-    } else if(req.url.match("\.js$")) {
-        fs.readFile('.'+req.url, "UTF-8", function(err, js){ // because it accepts something like ./try.js but req.url is /try.js so added .
-            res.writeHeader(200, {"Content-Type": "text/js"})
-            if(req.url !== '/server.js') // if its server file then skip this
+    } else if (req.url.match("\.js$")) {
+        fs.readFile('.' + req.url, "UTF-8", function (err, js) { // because it accepts something like ./try.js but req.url is /try.js so added .
+            res.writeHeader(200, { "Content-Type": "text/js" })
+            if (req.url !== '/server.js') // if its server file then skip this
                 res.write(js)
             res.end()
         })
-    } else if(req.url === '/data') {
-        if(req.method === 'POST') {
-            let writeStream = fs.createWriteStream(__dirname+'/data.txt')
+    } else if (req.url === '/data') {
+        if (req.method === 'POST') {
+            let writeStream = fs.createWriteStream(__dirname + '/data.txt')
             req.pipe(writeStream)
             // let body = ''
             // req.on('data', chunk => {
@@ -39,7 +39,7 @@ http.createServer((req, res) => {
             //         return res.end(`error: ${er.message}`)
             //     }
             // })
-        } else if(req.method === 'GET') {
+        } else if (req.method === 'GET') {
             const stream = fs.createReadStream(__dirname + '/data.txt')
             stream.pipe(res)
             console.log('done streams')
@@ -59,7 +59,7 @@ http.createServer((req, res) => {
 //             //     data = JSON.parse(dat || '[]')
 //             //     return data
 //             // })
-//             return 
+//             return
 //         } else { // no such file
 //             return []
 //         }

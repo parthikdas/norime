@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel='stylesheet' type='text/css' href='signup_style.css' />
-    <!-- <link rel="icon" href="logo.png" type="image/icon type"> -->
+    <!-- <link rel='stylesheet' type='text/css' href='signup_style.css' /> -->
+<!-- <link rel="icon" href="logo.png" type="image/icon type"> -->
 </head>
 
 
@@ -26,35 +26,34 @@
             </div>
 
             <label for="Email" class="email_label">Email :</label>
-            <input type="text" name="email" id="email" required="required" class="email">
+            <input type="text" name="email" class="email" required="required">
             <div class="red-text-email">
 
             </div>
     </div>
     <div>
         <label for="names" class="name_label">Name :</label>
-        <input type="text" name="names" id="name" required="required" class="name">
+        <input type="text" name="names" class="name" required="required">
         <div class="red-text-name">
 
         </div>
     </div>
     <div>
         <label class="password_label">Password :</label>
-        <input type="password" name="passwords" id="password" required="required" class="password">
+        <input type="password" name="passwords" class="password" required="required">
         <div class="red-text-password">
 
         </div>
     </div>
     <div>
         <label class="confirm_password_label">Retype Pass :</label>
-        <input type="password" name="confirm_passwords" id="confirm_password" required="required"
-            class="confirm_password">
+        <input type="password" name="confirm_passwords" class="confirm_password" required="required">
         <div class="red-text-password">
 
         </div>
     </div>
     <div class="button">
-        <button id="submit" class="submit">Submit</button>
+        <input name="submit" value="submit" class="submit">
     </div>
 
     <!-- <a href="login.html"
