@@ -1,3 +1,4 @@
+
 body{
     background-image: url(backgroundimg.jpg);
     background-repeat: no-repeat;
@@ -7,9 +8,9 @@ body{
 .container{
     
     position: relative;
-    top: 100px;
+    top: 55px;
     left: 330px;
-    height: 380px;
+    height: 450px;
     width: 600px;
     background-color: rgb(0,0,0,0.8);
     border-radius: 10%;
@@ -51,7 +52,7 @@ body{
 .confirm_password{
     
         position: absolute;
-        top: 245px;
+        top: 325px;
         left:160px;
         height: 35px;
         width: 300px;
@@ -61,7 +62,7 @@ body{
 }
 .submit{
     position: absolute;
-    top: 315px;
+    top: 390px;
     left: 260px;
     height: 35px;
     width: 100px;
@@ -108,6 +109,15 @@ input[type="submit"]{
     position: absolute;
     top: 253px;
     left: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    color: cornsilk;
+}
+
+.confirm_password_label{
+    position: absolute;
+    top: 330px;
+    left: 40px;
     font-size: 20px;
     font-weight: bold;
     color: cornsilk;

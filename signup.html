@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel='stylesheet' type='text/css' href='signup_style.css' />
-    <link rel="icon" href="logo.png" type="image/icon type">
+    <!-- <link rel='stylesheet' type='text/css' href='signup_style.css' /> -->
+    <!-- <link rel="icon" href="logo.png" type="image/icon type"> -->
 </head>
 
 
@@ -15,7 +15,7 @@
     <div>
         <h4 class="Login" style="position: absolute; top: -17px;font-size:30px; left: 250px;  color: cornsilk">Sign-up
         </h4>
-        <form action="add.php" class="sign-form" method="POST">
+        <form class="sign-form">
 
             <div style="color: crimson; position:absolute; top:130px;left:165px">
 
@@ -46,27 +46,57 @@
         </div>
     </div>
     <div>
-        <label class="confirm_password_label">Confirm Password :</label>
+        <label class="confirm_password_label">Retype Pass :</label>
         <input type="password" name="confirm_passwords" class="confirm_password" required="required">
         <div class="red-text-password">
 
         </div>
     </div>
     <div class="button">
-        <input type="submit" name="submit" value="submit" class="submit">
+        <input name="submit" value="submit" class="submit">
     </div>
 
-    <a href="login.html" style="position: absolute; top: 345px;left: 415px;  color: purple;font-size: 15px" ;> CLICK
-        HERE
-        TO LOGIN</a>
+    <!-- <a href="login.html"
+        style="position: absolute; top: 470px;left: 230px;  color: black;font-size: 15px; display: inline; text-decoration: none;">
+        Click
+        here to &nbsp;<p style="color: aqua; display: inline; ">SIGN IN</p></a> -->
     </form>
 </div>
 <script>
-    const user_name = document.querySelector('.name');
-    const user_email = document.querySelector('.email');
-    const user_password = document.querySelector('.password');
     // const submit_button = document.querySelector('.submit');
-    document.querySelector('.submit').addEventListener('click', function () { location.reload() });
+    document.querySelector('.submit').addEventListener('click', function () {
+
+        const user_name = document.querySelector('.name');
+        const user_email = document.querySelector('.email');
+        const user_password = document.querySelector('.password');
+        const user_confirm_password = document.querySelector('.confirm_password');
+        if (user_name.innerHTML && user_email.innerHTML && user_password.innerHTML && user_confirm_password.innerHTML) {
+            if (user_password.innerHTML == user_confirm_password.innerHTML) {
+
+                fetch("http://localhost:3000/userData")
+                    .then(data => data.json())
+                    .then(data => {
+
+                        let user_data = {
+                            id: data.length,
+                            name: user_name.innerHTML,
+                            email: user_email.innerHTML,
+                            password: user_password.innerHTML
+                        }
+
+                        fetch("http://localhost:3000/userData", {
+                            method: POST,
+                            body: JSON.stringify(user_data)
+                        }).then(data => data.json()).then(data => console.log(data))
+
+                    })
+            }
+            else {
+                alert("Password not same");
+                user_password.innerHTML = user_confirm_password.innerHTML = "";
+            }
+        }
+    });
 </script>
 
 
