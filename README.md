@@ -1,4 +1,4 @@
-# Project name is TheLogger
+# Project name is LoggIt
 ## Made by
 - Parthik Kumar Das
 - Adarsh Mohanty
