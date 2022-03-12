@@ -1,0 +1,46 @@
+body{
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    text-align: center;
+}
+.navbar-nav{
+    padding-right: 20px;
+}
+
+.navbar-brand{
+    padding-left: 40px;
+    padding-top: 20px;
+}
+.box{
+    background-color: #141E27;
+    margin: 60px auto 100px;
+    padding: 50px;
+    border-radius: 10px;
+}
+.btn{
+    width: inherit;
+}
+.btn-primary{
+    background-color: #8BDB81;
+    border-color: #65C18C;
+}
+.btn-primary:hover{
+    background-color: #65C18C;
+    border-color: #65C18C;
+}
+
+.bottom{
+    padding: 50px 100px 30px;
+    background-color: #212529;
+    color: rgba(255,255,255,.55);
+  }
+  
+  hr{
+    border: 2px solid;
+  }
+  
+  .copyright{
+    text-align: center;
+  }
