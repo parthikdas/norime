@@ -51,15 +51,25 @@
 <script>
     // const submit_button = document.querySelector('.submit');
     const api = 'http://localhost:3000/data'
+    let currentUserId = -1
     document.getElementById('submit').addEventListener('click', function () {
         const user_email = document.getElementById('email');
         const user_password = document.getElementById('password');
         if (user_email.value && user_password.value) {
-
-
-
+            fetch(api)
+            .then(data => data.json())
+            .then(data => {
+                for(let i in data) {
+                    if(i.email === user_email.value) currentUserId = i.id
+                }
+                if(currentUserId === -1) {
+                    alert("Please Signup.")
+                    user_email.value = user_password.value = ""
+                } else {
+                    // remove the section of sign/signup and make the expense section available
+                }
+            })
         }
-
     });
 </script>
 
