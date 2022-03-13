@@ -14,6 +14,7 @@ showSection.addEventListener('click',()=>{
         showSection.innerHTML = 'Click here to Signin'
         heading.innerHTML = 'Sign out'
         submit.onclick = () => { signout() }
+        document.getElementById('iframe').style.display = 'block'
     } else { // show signin
         showSection.classList.remove('signout')
         nameInput.style.display = confirmPassInput.style.display = 'none'
@@ -21,6 +22,7 @@ showSection.addEventListener('click',()=>{
         showSection.innerHTML = 'Click here to Signout'
         heading.innerHTML = 'Sign in'
         submit.onclick = () => { signin() }
+        document.getElementById('iframe').style.display = 'none'
     }
 })
 
