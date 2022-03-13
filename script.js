@@ -24,7 +24,7 @@ showSection.addEventListener('click',()=>{
         submit.onclick = () => { signin() }
         document.getElementById('iframe').style.display = 'none'
     }
-})
+}) 
 
 function signin() {
     const user_email = document.getElementById('email');
