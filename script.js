@@ -10,6 +10,7 @@ showSection.addEventListener('click',()=>{
     if(showSection.classList.contains('signin')) { // show signout
         showSection.classList.remove('signin')
         nameInput.style.display = confirmPassInput.style.display = 'block'
+        nameInput.disabled = confirmPassInput.disabled = 'false'
         showSection.classList.add('signout')
         showSection.innerHTML = 'Click here to Signin'
         heading.innerHTML = 'Sign out'
@@ -18,6 +19,7 @@ showSection.addEventListener('click',()=>{
     } else { // show signin
         showSection.classList.remove('signout')
         nameInput.style.display = confirmPassInput.style.display = 'none'
+        nameInput.disabled = confirmPassInput.disabled = 'true'
         showSection.classList.add('signin')
         showSection.innerHTML = 'Click here to Signout'
         heading.innerHTML = 'Sign in'
@@ -60,8 +62,11 @@ function signout() {
     const user_email = document.getElementById('email');
     const user_password = document.getElementById('password');
     const user_confirm_password = document.getElementById('confirm_password');
+    console.log(1)
     if (user_name.value && user_email.value && user_password.value && user_confirm_password.value) {
+        console.log(2)
         if (user_password.value == user_confirm_password.value) {
+            console.log(3)
             fetch(api)
                 .then(data => data.json())
                 .then(data => {
@@ -73,6 +78,7 @@ function signout() {
                         balance: 0,
                         transaction: []
                     })
+                    console.log(data)
                     fetch(api, {
                         method: "POST",
                         body: JSON.stringify(data)
