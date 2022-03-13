@@ -3,4 +3,4 @@
 - Parthik Kumar Das
 - Adarsh Mohanty
 - Ansh Jain
-- Zaid Ali Mohammad
+- Zaid Ali Syed
