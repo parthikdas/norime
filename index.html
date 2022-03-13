@@ -81,22 +81,31 @@
     <div class="main">
         <!-- Signin / Signup section -->
         <div class="container-lg box" id="containerShow">
-            <h4 id="heading" style="color: cornsilk">Sign-up</h4>
-            <div id="email-input">
-                <label for="Email" class="email_label">Email :</label>
-                <input type="text" name="email" id="email" required class="email"><br>
-            </div>
-            <div id="name-input">
-                <label for="names" class="name_label">Name :</label>
-                <input type="text" name="names" id="name" required class="name"><br>
-            </div>
-           <div id="pass-input">
-                <label class="password_label">Password :</label>
-                <input type="password" name="passwords" id="password" required class="password"><br>
-           </div>
-            <div id="confirm-pass-input">
-                <label class="confirm_password_label">Retype Pass :</label>
-                <input type="password" name="confirm_passwords" id="confirm_password" required class="confirm_password"><br>
+
+            <h1 class="display-4 mb-5" id="heading" style="color: greenyellow">Sign-up</h1>
+
+            <div class="container-sm p-5">
+
+              <div class="rowinp row mb-3 mx-auto" id="email-input">
+                <label for="exampleInputEmail1" class="col-3 text-start form-label email_label">Email :</label>
+                <div class="col-9"><input type="email" class="form-control" name="email" id="email" placeholder="Enter email" required class="email"></div>
+              </div>
+              <div class="rowinp row my-3 mx-auto" id="name-input">
+                <label for="names" class="col-3 text-start form-label name_label">Name :</label>
+                <div class="col-9"><input class="form-control" type="text" name="names" id="name" placeholder="Enter your name" required class="name"></div>
+              </div>
+              <div class="rowinp row my-3 mx-auto" id="pass-input">
+                <label class="col-3 text-start form-label password_label">Password :</label>
+                <div class="col-9"><input type="password" class="form-control" name="passwords" id="password" placeholder="Enter Password" required class="password"></div>
+              </div>
+              <div class="rowinp row my-3 mx-auto" id="confirm-pass-input">
+                <label class="col-3 text-start form-label confirm_password_label">Retype Pass :</label>
+                <div class="col-9"><input type="password" class="form-control" name="confirm_passwords" id="confirm_password" placeholder="Retype Password" required class="confirm_password"></div>
+              </div>
+              <button id="submit" class="rowsub mt-3 btn btn-primary submit">Submit</button>
+              <br><br>
+              <button id = "showSection" class="rowsub btn btn-primary">Click here to signin</button>
+
             </div>
             <!-- Remove the iframe -->
             <iframe src="https://verify1-6942-lqmec6.twil.io/index.html" title="W3Schools Free Online Web Tutorials" height="600" width="100%"></iframe>
