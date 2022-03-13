@@ -49,3 +49,10 @@ body{
   #expenseTracker {
       display: none;
   }
+  #logout {
+      display: none;
+  }
+  a {
+      text-decoration: none;
+      color: #fff;
+  }
