@@ -16,4 +16,4 @@ http.createServer((req, res) => {
         stream.pipe(res)
     }
 })
-.listen(3000, console.log('server running at http://localhost:3000'))
+.listen(3000 || process.env.PORT, console.log('server running at http://localhost:3000'))
